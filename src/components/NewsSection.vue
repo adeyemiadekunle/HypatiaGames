@@ -8,35 +8,46 @@
   </div>
 </template>
 
-<script setup>
+<script >
 import NewsCard from "./NewsCard.vue";
 
-const data = [
-  {
-    id: 1,
-    imgUrl: '',
-    title: '',
-    link: '',
+export default {
+  name: "NewsSection",
+
+  components: {
+    NewsCard,
   },
-   {
-    id: 2,
-    imgUrl: '',
-    title: '',
-    link: '',
-  },
-   {
-    id: 3,
-    imgUrl: '',
-    title: '',
-    link: '',
-  },
-   {
-    id: 4,
-    imgUrl: '',
-    title: '',
-    link: '',
-  }
-]
+  
+};
+
+
+
+// const data = [
+//   {
+//     id: 1,
+//     imgUrl: '',
+//     title: '',
+//     link: '',
+//   },
+//    {
+//     id: 2,
+//     imgUrl: '',
+//     title: '',
+//     link: '',
+//   },
+//    {
+//     id: 3,
+//     imgUrl: '',
+//     title: '',
+//     link: '',
+//   },
+//    {
+//     id: 4,
+//     imgUrl: '',
+//     title: '',
+//     link: '',
+//   }
+// ]
 
 
 

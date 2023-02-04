@@ -18,9 +18,15 @@
 </template>
 
 <script>
+export default {
+  name: "NewsCard",
+};
 
 
 </script>
+
+
+
 
 <style  scoped>
 .news_card_container {

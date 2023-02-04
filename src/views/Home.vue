@@ -70,12 +70,12 @@
         </div>
         <div class="hgt_image_container">
           <img
-            src="../assets/image/HGT_Asset.png"
+            src="../assets/image/HGT_Asset.avif"
             alt="HGT_function"
             class="desktop"
           />
           <img
-            src="../assets/image/Mobile_HGT_Asset.png"
+            src="../assets/image/Mobile_HGT_Asset.avif"
             alt="HGT_function"
             class="tablet"
           />
@@ -103,8 +103,12 @@
     <!-- The Backer and Partner -->
     <section class="partner">
       <div class="partner_container">
-        <div></div>
-        <div></div>
+        <div>
+          <h3> Meet Our Web3 Gaming Partner and Backer</h3>
+        </div>
+        <div>
+          <PartnerList />
+        </div>
       </div>
     </section>
 
@@ -121,13 +125,47 @@
         </div>
       </div>
     </section>
+
+    <!-- Join Us -->
+    <section class="join_us">
+      <div class="join_us_container">
+        <div class="join_us_content">
+          <h2>Join Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            voluptas qui quibusdam natus nulla dolores. Culpa praesentium eum
+            omnis aperiam!
+          </p>
+          <div class="join_us_btn">
+            <button>JOIN US</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
   </main>
 </template>
 
-<script setup>
+<script >
 import HeroSlide from "../components/HeroSlide.vue";
 import Ecoitem from "../components/Ecoitem.vue";
 import NewsSection from "../components/NewsSection.vue";
+import PartnerList from "../components/PartnerList.vue";
+export default {
+
+  name: "Home",
+
+   components: {
+    HeroSlide,
+    Ecoitem,
+    NewsSection,
+    PartnerList,
+
+  },
+
+};
+
 </script>
 
 <style scoped>
@@ -452,6 +490,7 @@ import NewsSection from "../components/NewsSection.vue";
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 40px;
 }
 
 .about_ecosystem_container {
@@ -512,8 +551,34 @@ import NewsSection from "../components/NewsSection.vue";
 /* The Partner */
 
 .partner {
-  border: 1px solid red;
   min-height: 600px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  /* border: 1px solid red; */
+}
+
+@media screen and (min-width: 768px) {
+  .partner {
+    margin-bottom: 50px;
+  }
+}
+
+.partner_container {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner_container h3 {
+  font-size: var(--step-2);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
 }
 
 
@@ -550,4 +615,12 @@ import NewsSection from "../components/NewsSection.vue";
 .news_list {
   margin-top: 40px;
 }
+
+
+/* Join Us */
+
+
+
+
+/* Footer */
 </style>
