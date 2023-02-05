@@ -562,7 +562,12 @@ export default {
 
 /* The Partner */
 .partner {
-  min-height: 600px;
+  min-height: 500px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -577,14 +582,16 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  /* border: 1px solid green; */
 }
+
 /* Max screen of 768px */
- @media screen and (max-width: 768px) {
+ /* @media screen and (max-width: 768px) {
   .partner_container {
     margin-bottom: 70px;
   }
-}
+} */
 
 .partner_container h3 {
   font-size: var(--step-2);
@@ -598,7 +605,7 @@ export default {
 
 /* News Section */
 .news {
-  min-height: 500px;
+  min-height: 400px;
   width: 100%;
   /* border: 1px solid red; */
   display: flex;

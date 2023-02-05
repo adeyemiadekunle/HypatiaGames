@@ -18,11 +18,7 @@ const route =  [
     name: 'Hypatia',
     component: ()=> import ('../views/Hypatia.vue')
 },
-{
-    path: '/games',
-    name: 'Games',
-    component: ()=> import ('../views/Games.vue')
-},
+
 {
     path: '/ecosystem',
     name: 'Ecosystem',
