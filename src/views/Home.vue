@@ -6,7 +6,6 @@
     </section>
 
     <!-- about us -->
-
     <section class="about_us">
       <div class="about_container">
         <div class="about_content">
@@ -24,33 +23,33 @@
         </div>
       </div>
     </section>
-    <!-- about the game  -->
 
+    <!-- about the game  -->
     <section class="about_game">
-      <div class="game_heading">
-        <div><h4>Upcoming Game</h4></div>
-      </div>
-      <div class="background_image">
-        <div class="text_overlay">
-          <div class="text_content">
-            <div class="game_logo">
-              <img src="../assets/image/New_Logo.webp" alt="flaming_logo" />
-            </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-              eveniet accusantium fugiat voluptatum beatae, optio laudantium
-              doloribus iste iusto odit debitis consectetur, eaque quas pariatur
-              fugit perferendis expedita molestiae illum corporis temporibus.
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero,
-              alias neque vitae ipsa accusantium repellendus nemo! Consequatur
-              amet ipsum molestias!
-            </p>
-            <div>
-              <button>VIEW PROJECT</button>
+        <div class="game_heading">
+          <div><h4>Upcoming Game</h4></div>
+        </div>
+        <div class="background_image">
+          <div class="text_overlay">
+            <div class="text_content">
+              <div class="game_logo">
+                <img src="../assets/image/New_Logo.webp" alt="flaming_logo" />
+              </div>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+                eveniet accusantium fugiat voluptatum beatae, optio laudantium
+                doloribus iste iusto odit debitis consectetur, eaque quas
+                pariatur fugit perferendis expedita molestiae illum corporis
+                temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Vero, alias neque vitae ipsa accusantium repellendus nemo!
+                Consequatur amet ipsum molestias!
+              </p>
+              <div>
+                <button>VIEW PROJECT</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- about HGT -->
@@ -100,11 +99,13 @@
         </div>
       </div>
     </section>
+
+
     <!-- The Backer and Partner -->
     <section class="partner">
       <div class="partner_container">
         <div>
-          <h3> Meet Our Web3 Gaming Partner and Backer</h3>
+          <h3>Meet Our Web3 Gaming Partner and Backer</h3>
         </div>
         <div>
           <PartnerList />
@@ -127,7 +128,8 @@
     </section>
 
     <!-- Join Us -->
-    <section class="join_us">
+
+    <!-- <section class="join_us">
       <div class="join_us_container">
         <div class="join_us_content">
           <h2>Join Us</h2>
@@ -141,9 +143,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-   
+    </section> -->
   </main>
 </template>
 
@@ -153,19 +153,15 @@ import Ecoitem from "../components/Ecoitem.vue";
 import NewsSection from "../components/NewsSection.vue";
 import PartnerList from "../components/PartnerList.vue";
 export default {
-
   name: "Home",
 
-   components: {
+  components: {
     HeroSlide,
     Ecoitem,
     NewsSection,
     PartnerList,
-
   },
-
 };
-
 </script>
 
 <style scoped>
@@ -187,13 +183,15 @@ export default {
   justify-content: center;
 }
 .about_container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   height: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .about_content {
@@ -249,6 +247,8 @@ export default {
   min-height: 600px;
 }
 
+
+
 .about_game .game_heading {
   width: 100%;
   height: 100px;
@@ -261,8 +261,6 @@ export default {
 
 .game_heading div {
   width: 100%;
-  /* height: 100%; */
-  width: 95%;
   margin: 0 auto;
 }
 
@@ -362,7 +360,7 @@ export default {
 }
 
 .about_hgt_container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   height: 100%;
   /* border: 1px solid red; */
@@ -370,13 +368,22 @@ export default {
   margin-bottom: 70px;
 }
 
+/* Larger screen than 1024px */
 @media screen and (min-width: 1024px) {
   .about_hgt_container {
-    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Larger screen than 1440px */
+@media screen and (min-width: 1440px) {
+  .about_hgt_container {
+    width: 85%;
+  }
+}
+  
+
 
 .about_hgt_header {
   display: flex;
@@ -396,6 +403,7 @@ export default {
   font-size: var(--step-1);
 }
 
+/* Larger screen than 1024px */
 @media screen and (min-width: 1024px) {
   .about_hgt_header {
     grid-column: 1/2;
@@ -420,6 +428,7 @@ export default {
   margin-bottom: 50px;
 }
 
+/* Larger screen than 1024px */
 @media screen and (min-width: 1024px) {
   .about_hgt_btn_container {
     align-items: start;
@@ -465,6 +474,8 @@ export default {
   object-position: 100%;
 }
 
+
+/* Larger screen than 1024px */
 @media screen and (min-width: 1024px) {
   .hgt_image_container .tablet {
     display: none;
@@ -490,16 +501,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
 }
 
 .about_ecosystem_container {
-  width: 95%;
+  width: 90%;
+  margin-top: 70px;
 }
 
 .about_ecosystem_heading {
   width: 100%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .about_ecosystem_heading h2 {
@@ -548,29 +559,31 @@ export default {
   align-items: center;
 }
 
-/* The Partner */
 
+/* The Partner */
 .partner {
   min-height: 600px;
-  margin-top: 20px;
-  margin-bottom: 80px;
-  /* border: 1px solid red; */
+
 }
 
-@media screen and (min-width: 768px) {
-  .partner {
-    margin-bottom: 50px;
-  }
-}
+/* Larger screen than 768px */
+ 
 
 .partner_container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+/* Max screen of 768px */
+ @media screen and (max-width: 768px) {
+  .partner_container {
+    margin-bottom: 70px;
+  }
 }
 
 .partner_container h3 {
@@ -583,19 +596,30 @@ export default {
 
 
 
-
-
-
 /* News Section */
 .news {
   min-height: 500px;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 .news_container {
-  max-width: 95%;
+  width: 90%;
   margin: 0 auto;
+  /* border: 1px solid green; */
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* Larger screen than 1440px */
+@media screen and (min-width: 1440px) {
+  .news_container {
+    width: 85%;
+  }
 }
 
 .news_heading {
@@ -616,11 +640,36 @@ export default {
   margin-top: 40px;
 }
 
-
 /* Join Us */
 
+/* .join_us {
+  min-height: 500px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.join_us_container {
+  width: 90%;
+  border: 1px solid green;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.join_us_content {
+  border: 1px solid blue;
+  width: 90%;
+  padding: 80px 0px;
+ 
+} */
 
 
 
-/* Footer */
+
 </style>

@@ -50,9 +50,8 @@ export default {
 // ]
 
 
-
-
 </script>
+
 
 <style scoped>
 .news_section {
@@ -63,7 +62,7 @@ export default {
 
 
 .news_section_container {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -74,10 +73,12 @@ export default {
 @media screen and (min-width: 1024px) {
     .news_section_container {
         width: 100%;
+        gap: 50px;
          flex-direction: row;
-     
       
     }
     
 }
+
+
 </style>

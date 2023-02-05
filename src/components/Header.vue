@@ -72,9 +72,11 @@ const closeMenu = () => {
   flex-direction: row;
   justify-content: space-between;
   padding: 16px 0;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
+
+
 
 .mobile_nav_item {
   position: fixed;
@@ -148,6 +150,8 @@ const closeMenu = () => {
   color: var(--primary-white);
 }
 
+
+/* Desktop Styling */
 @media screen and (min-width: 1024px) {
   .header_desktop_bg {
     background: var(--primary-white);
@@ -155,10 +159,6 @@ const closeMenu = () => {
     opacity: 0.9;
   }
 
-  .header_container {
-    width: 95%;
-    padding: 15px 0;
-  }
   .logo a {
     color: var(--secondary-black);
   }
@@ -187,6 +187,12 @@ const closeMenu = () => {
 
   .menu_btn {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header_container{
+    width: 85%;
   }
 }
 </style>

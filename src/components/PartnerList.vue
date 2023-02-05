@@ -74,8 +74,8 @@ export default {
 
 .partner_img_container {
     /* border: 1px solid  green; */
-    max-height: 130px;
-    max-width: 130px;
+    max-height: 120px;
+    max-width: 120px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -100,7 +100,7 @@ export default {
     gap: 50px;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 95%;
     height: 100%;
     margin: auto;
     padding: 20px 10px;
