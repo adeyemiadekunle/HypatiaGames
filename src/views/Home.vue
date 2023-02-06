@@ -12,44 +12,50 @@
           <h2>We are Hypatia Games</h2>
           <div></div>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
-            nostrum! Recusandae, est cum laudantium dolorem iste ullam vel
-            expedita totam alias sit, quod doloremque maiores? Repellendus
-            veritatis laboriosam quod a nesciunt explicabo! Illum similique,
-            nisi quaerat minima excepturi maiores possimus ipsam officia nobis,
-            doloremque minus enim iusto officiis commodi distinctio!
+            Hypatia Games is a developing game studio, an innovative
+            blockchain-based real-life umbrella group of businesses that allows
+            investors to earn passive income. is the next-generation blockchain
+            solution that seamlessly blends the best of web2 and web3
+            technology. Our platform offers unparalleled security, transparency,
+            and decentralization, powered by real-world asset backing.
+            Experience the future of finance and investment, today.
           </p>
-          <button>ABOUT US</button>
+          <!-- <button>ABOUT US</button> -->
+          <router-link to="/about">
+            <PrimaryButton>About Us </PrimaryButton>
+          </router-link>
         </div>
       </div>
     </section>
 
     <!-- about the game  -->
     <section class="about_game">
-        <div class="game_heading">
-          <div><h4>Upcoming Game</h4></div>
-        </div>
-        <div class="background_image">
-          <div class="text_overlay">
-            <div class="text_content">
-              <div class="game_logo">
-                <img src="../assets/image/New_Logo.webp" alt="flaming_logo" />
-              </div>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-                eveniet accusantium fugiat voluptatum beatae, optio laudantium
-                doloribus iste iusto odit debitis consectetur, eaque quas
-                pariatur fugit perferendis expedita molestiae illum corporis
-                temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Vero, alias neque vitae ipsa accusantium repellendus nemo!
-                Consequatur amet ipsum molestias!
-              </p>
-              <div>
-                <button>VIEW PROJECT</button>
-              </div>
+      <div class="game_heading">
+        <div><h4>Upcoming Game</h4></div>
+      </div>
+      <div class="background_image">
+        <div class="text_overlay">
+          <div class="text_content">
+            <div class="game_logo">
+              <img src="../assets/image/New_Logo.webp" alt="flaming_logo" />
+            </div>
+            <p>
+              Flaming Wheelz is a fantasy RPG mixed with racing for anyone who's
+              ever daydreamed about conquering the street with your driving
+              expertise, smashing the car in front of them in traffic, speeding
+              away from the cops, or driving up a half-finished building at a
+              construction site, getting into the racing arena to prove your
+              skills at the grandest stage.
+            </p>
+            <div>
+              <!-- <button>VIEW PROJECT</button> -->
+              <a href="https://flamingwheelz.com/">
+                <PrimaryButton>View Project</PrimaryButton>
+              </a>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- about HGT -->
@@ -58,13 +64,15 @@
         <div class="about_hgt_header">
           <h2>Hypatia Games Token</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            voluptas qui quibusdam natus nulla dolores. Culpa praesentium eum
-            omnis aperiam!
+            Hypatia Game Token is a decentralized, and governance token in
+            Hypatia Game ecosystem, providing a sustainable economic model for the
+            ecosystem. It is a utility token that can be used to pay for in-game
+            items, services, and other in-game activities.
           </p>
-
           <div class="about_hgt_btn_container">
-            <button>LEARN MORE</button>
+            <router-link to="/hgt">
+              <PrimaryButton>Tokenomics </PrimaryButton>
+            </router-link>
           </div>
         </div>
         <div class="hgt_image_container">
@@ -88,18 +96,23 @@
         <div class="about_ecosystem_heading">
           <h2>The Ecosystem</h2>
           <p>
-            Building the industry's deepest and most interconnected ecosytem.
+            Building the industry's deepest and most interconnected ecosystem.
+            Our ecosystem is made up of some of the best projects backed by
+            market-leading investment plans that will help secure good returns
+            for our holders.
           </p>
         </div>
         <div class="about_ecosystem_btn_cont">
-          <button>LEARN MORE</button>
+          <!-- <button>LEARN MORE</button> -->
+          <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/ecosystem">
+            <PrimaryButton>Whitepaper</PrimaryButton>
+          </a>
         </div>
         <div class="about_ecosystem_card_con">
           <Ecoitem />
         </div>
       </div>
     </section>
-
 
     <!-- The Backer and Partner -->
     <section class="partner">
@@ -114,7 +127,6 @@
     </section>
 
     <!-- News Section -->
-
     <section class="news">
       <div class="news_container">
         <div class="news_heading">
@@ -149,9 +161,11 @@
 
 <script >
 import HeroSlide from "../components/HeroSlide.vue";
-import Ecoitem from "../components/Ecoitem.vue";
+import Ecoitem from "../components/Ecosystem/Ecoitem.vue";
 import NewsSection from "../components/NewsSection.vue";
 import PartnerList from "../components/PartnerList.vue";
+import PrimaryButton from "../components/Button/PrimaryButton.vue";
+import SecondaryButton from "../components/Button/SecondaryButton.vue";
 export default {
   name: "Home",
 
@@ -160,6 +174,8 @@ export default {
     Ecoitem,
     NewsSection,
     PartnerList,
+    PrimaryButton,
+    SecondaryButton,
   },
 };
 </script>
@@ -227,27 +243,11 @@ export default {
   color: white;
 }
 
-.about_content button {
-  border: 2px solid black;
-  border-radius: 8px;
-  height: 60px;
-  width: 200px;
-  transition: all ease-in-out 0.5s;
-  font-size: var(--step--1);
-}
-
-.about_content button:hover {
-  background: black;
-  color: white;
-}
-
 /* about game */
 .about_game {
   width: 100%;
   min-height: 600px;
 }
-
-
 
 .about_game .game_heading {
   width: 100%;
@@ -329,23 +329,6 @@ export default {
   }
 }
 
-.text_content button {
-  width: 200px;
-  height: 60px;
-  font-weight: 500;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  border-radius: 8 2px;
-  font-size: var(--step-0);
-  transition: all ease-in-out 0.5s;
-}
-
-.text_content button:hover {
-  background: black;
-  border-color: black;
-}
-
 /* About hgt */
 
 .about_hgt {
@@ -382,8 +365,6 @@ export default {
     width: 85%;
   }
 }
-  
-
 
 .about_hgt_header {
   display: flex;
@@ -435,24 +416,6 @@ export default {
   }
 }
 
-.about_hgt_btn_container button {
-  width: 200px;
-  height: 60px;
-  font-weight: 500;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  border-radius: 2px;
-  font-size: var(--step-0);
-  transition: all ease-in-out 0.3s;
-  margin-bottom: 20px;
-}
-
-.about_hgt_btn_container button:hover {
-  background: black;
-  border-color: black;
-}
-
 .hgt_image_container {
   width: 100%;
   height: 100%;
@@ -473,7 +436,6 @@ export default {
   object-fit: cover;
   object-position: 100%;
 }
-
 
 /* Larger screen than 1024px */
 @media screen and (min-width: 1024px) {
@@ -535,20 +497,6 @@ export default {
   align-items: center;
 }
 
-.about_ecosystem_btn_cont button {
-  border: 2px solid black;
-  border-radius: 2px;
-  height: 60px;
-  width: 200px;
-  transition: all ease-in-out 0.5s;
-  font-size: var(--step--1);
-}
-
-.about_ecosystem_btn_cont button:hover {
-  background: black;
-  color: white;
-}
-
 .about_ecosystem_card_con {
   height: 100%;
   margin-top: 70px;
@@ -559,7 +507,6 @@ export default {
   align-items: center;
 }
 
-
 /* The Partner */
 .partner {
   min-height: 500px;
@@ -568,11 +515,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 /* Larger screen than 768px */
- 
 
 .partner_container {
   width: 90%;
@@ -587,7 +532,7 @@ export default {
 }
 
 /* Max screen of 768px */
- /* @media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .partner_container {
     margin-bottom: 70px;
   }
@@ -600,8 +545,6 @@ export default {
   margin-bottom: 30px;
   color: white;
 }
-
-
 
 /* News Section */
 .news {
@@ -675,8 +618,4 @@ export default {
   padding: 80px 0px;
  
 } */
-
-
-
-
 </style>

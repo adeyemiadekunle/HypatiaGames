@@ -3,7 +3,7 @@
     <div class="header_desktop_bg">
       <div class="header_container">
         <div class="logo" v-bind:class="{ 'logo-open': showMenu }">
-          <router-link to="/"> Hypatia Games </router-link>
+          <router-link @click="closeMenu" to="/"> Hypatia Games </router-link>
         </div>
         <div>
           <nav
@@ -15,24 +15,23 @@
               <router-link @click="closeMenu" to="/">HOME</router-link>
               <router-link @click="closeMenu" to="/games">GAMES</router-link>
               <router-link @click="closeMenu" to="/hgt">HGT TOKEN</router-link>
-              <router-link @click="closeMenu" to="/ecosystem"
-                >ECOSYSTEM</router-link
-              >
+              <!-- <router-link @click="closeMenu" to="/ecosystem">ECOSYSTEM</router-link> -->
               <router-link @click="closeMenu" to="/about">ABOUT</router-link>
             </div>
           </nav>
-          <button
+          <div
             @click="toggleMenu"
             class="menu_btn"
             v-bind:class="{ 'btn-open': showMenu }"
           >
-            Menu
-          </button>
+            <font-awesome-icon icon=" fa-solid fa-bars" />
+          </div>
+
           <nav class="desktop_nav_item">
             <router-link to="/">HOME</router-link>
             <router-link to="/games">GAMES</router-link>
             <router-link to="/hgt">HGT TOKEN</router-link>
-            <router-link to="/ecosystem">ECOSYSTEM</router-link>
+            <!-- <router-link to="/ecosystem">ECOSYSTEM</router-link> -->
             <router-link to="/about">ABOUT</router-link>
           </nav>
         </div>
@@ -47,19 +46,27 @@ let showMenu = ref(false);
 
 const toggleMenu = () => {
   showMenu.value = !showMenu.value;
-  if (showMenu.value) {
+
+  if (showMenu.value === true) {
     document.body.classList.add("no-scroll");
-  } else {
+  } 
+  else {
     document.body.classList.remove("no-scroll");
   }
 };
 
 const closeMenu = () => {
   showMenu.value = false;
+  if(showMenu.value === false) {
+    document.body.classList.remove("no-scroll");
+  }
+  
 };
 </script>
 
 <style scoped>
+
+
 .header {
   position: relative;
   height: 6rem;
@@ -77,8 +84,6 @@ const closeMenu = () => {
   width: 90%;
   margin: 0 auto;
 }
-
-
 
 .mobile_nav_item {
   position: fixed;
@@ -139,19 +144,16 @@ const closeMenu = () => {
 }
 
 .menu_btn {
-  padding: 12px;
-  border-radius: 8px;
-  background-color: var(--primary-white);
-  color: var(--secondary-black);
-  border-color: var(--primary-white);
+  padding: 5px 15px;
+  color: var(--primary-white);
   border-style: none;
+  font-size: var(--step-4);
+  transition: all ease-in-out 0.3s;
 }
 
 .btn-open {
-  background: var(--secondary-black);
-  color: var(--primary-white);
+  color: var(--secondary-black);
 }
-
 
 /* Desktop Styling */
 @media screen and (min-width: 1024px) {
@@ -193,7 +195,7 @@ const closeMenu = () => {
 }
 
 @media screen and (min-width: 1440px) {
-  .header_container{
+  .header_container {
     width: 85%;
   }
 }

@@ -26,7 +26,7 @@
 <script>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
-import Card from "./Card.vue";
+import Card from "../Card/Card.vue";
 
 import {reactive} from 'vue'
 

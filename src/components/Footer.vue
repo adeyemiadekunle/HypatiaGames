@@ -29,7 +29,7 @@
             </p>
          
         </div>
-        <div >
+        <div  class="footer_others">
             <div class="contact_us">
                 <h4>Contact Us</h4>
                 <p>contact@hypatiagames.net</p>
@@ -106,8 +106,8 @@ list-style-type: none;
 }
 
 .horizontal {
-    border: 1px solid var(--primary-white-soft);
     margin-bottom: 30px;
+    height: 0.5px;
 }
 @media  screen and (min-width: 1024px) {
     
@@ -166,5 +166,12 @@ list-style-type: none;
     font-size: var(--step--1);
 }
 
+@media screen and (min-width: 1024px) {
+    
+.footer_others {
+    margin-left: 150px;
+
+}
+}
 
 </style>

@@ -9,7 +9,7 @@
 </template>
 
 <script >
-import NewsCard from "./NewsCard.vue";
+import NewsCard from "./Card/NewsCard.vue";
 
 export default {
   name: "NewsSection",
