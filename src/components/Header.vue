@@ -13,10 +13,10 @@
           >
             <div class="nav_container">
               <router-link @click="closeMenu" to="/">HOME</router-link>
-              <router-link @click="closeMenu" to="/games">GAMES</router-link>
+              <a href="#" target="_top">GAMES</a>
               <router-link @click="closeMenu" to="/hgt">HGT TOKEN</router-link>
-              <!-- <router-link @click="closeMenu" to="/ecosystem">ECOSYSTEM</router-link> -->
-              <router-link @click="closeMenu" to="/about">ABOUT</router-link>
+              <a href="#about" target="_top">ABOUT</a>
+              <a href="#team" target="_top">TEAM</a>
             </div>
           </nav>
           <div
@@ -29,10 +29,10 @@
 
           <nav class="desktop_nav_item">
             <router-link to="/">HOME</router-link>
-            <router-link to="/games">GAMES</router-link>
+            <a href="#" target="_top">GAMES</a>
             <router-link to="/hgt">HGT TOKEN</router-link>
-            <!-- <router-link to="/ecosystem">ECOSYSTEM</router-link> -->
-            <router-link to="/about">ABOUT</router-link>
+            <a href="#about" target="_top">ABOUT</a>
+            <a href="#team" target="_top">TEAM</a>
           </nav>
         </div>
       </div>

@@ -6,7 +6,7 @@
     </section>
 
     <!-- about us -->
-    <section class="about_us">
+    <section class="about_us" id="about">
       <div class="about_container">
         <div class="about_content">
           <h2>We are Hypatia Games</h2>
@@ -21,9 +21,9 @@
             Experience the future of finance and investment, today.
           </p>
           <!-- <button>ABOUT US</button> -->
-          <router-link to="/about">
+          <!-- <router-link to="/about">
             <PrimaryButton>About Us </PrimaryButton>
-          </router-link>
+          </router-link> -->
         </div>
       </div>
     </section>
@@ -94,7 +94,7 @@
     <section class="about_ecosystem">
       <div class="about_ecosystem_container">
         <div class="about_ecosystem_heading">
-          <h2>The Ecosystem</h2>
+          <h2>Other Ecosystem</h2>
           <p>
             Building the industry's deepest and most interconnected ecosystem.
             Our ecosystem is made up of some of the best projects backed by

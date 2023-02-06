@@ -7,11 +7,7 @@ const route =  [
     component: ()=> import('../views/Home.vue') 
 },
 
-{
-    path: '/about',
-    name: 'About',
-    component:() => import('../views/About.vue')
-},
+
 
 {
     path: '/hgt',
@@ -19,11 +15,7 @@ const route =  [
     component: ()=> import ('../views/Hypatia.vue')
 },
 
-{
-    path: '/ecosystem',
-    name: 'Ecosystem',
-    component: ()=> import ('../views/Ecosystem.vue')
-}
+
 ]
 
 const router = createRouter({
