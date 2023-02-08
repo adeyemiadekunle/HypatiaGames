@@ -3,8 +3,12 @@
     <div class="header_desktop_bg">
       <div class="header_container">
         <div class="logo" >
-          <router-link @click="closeMenu" to="/"> Hypatia Games </router-link>
+          <router-link @click="closeMenu" to="/">
+          <img class="logo_desktop" src="../assets/image/hypatia_full__logo_b.avif" alt="Logo">
+          <img  class="logo_mobile" src="../assets/image/hypatia_full__logo_w.avif" alt="">
+          </router-link>
         </div>
+
         <div>
           <nav class="mobile_nav_item" v-if="showMenu" v-bind:class="{ 'menu-hidden': !showMenu }">
             <div class="mobile_nav_container">
@@ -28,9 +32,26 @@
             <!-- <a href="#about" target="_top">ABOUT</a> -->
             <a href="#" target="_top">WHITEPAPER</a>
             <ul>
-              <li>facebook</li>
-              <li>twitter</li>
-              <li>discord</li>
+              <li>
+               <a href="https://twitter.com/Hypatia_Games">
+                        <font-awesome-icon icon="fa-brands fa-twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-discord" />
+                </a>
+              </li>
+              <li>
+                  <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-telegram" />
+                 </a>
+              </li>
+              <li>
+                <a href="#">
+                        <font-awesome-icon icon="fa-brands fa-youtube" />
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -86,6 +107,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   z-index: 3;
+  justify-content: center;
+  /* border: 1px solid green; */
 }
 
 .header_container {
@@ -93,12 +116,27 @@ export default {
   flex-direction: row;
   width: 90%;
   margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo .logo_desktop {
+   display: none;
+  }
+
+.logo .logo_mobile {
+  display: block;
+  width: 80px;
+  height: 100%;
+  
+  
 }
 
 /* Lower than 1024px  */
 @media screen and (max-width: 1024px) {
   .header_container {
      justify-content: space-between;
+     /* border: 1px solid green; */
   }
   
 }
@@ -117,16 +155,7 @@ export default {
   background-color: var(--secondary-black);
 }
 
-.logo a {
-  color: var(--primary-white);
-  font-weight: 600;
-  font-size: var(--step-2);
-  transition: all ease-in-out 0.5s;
-}
 
-/* .logo-open a {
-  color: var(--secondary-black);
-} */
 
 .mobile_nav_container {
   display: flex;
@@ -135,6 +164,7 @@ export default {
   padding: 10px 0;
   width: 95%;
   margin: 0 auto;
+ 
 }
 
 .mobile_nav_item .mobile_nav_container a {
@@ -162,42 +192,47 @@ export default {
 .header-open {
   background: var(--secondary-black);
   border-bottom: 1px solid var(--primary-white-soft);
+   /* border: 1px solid red; */
 }
 
 .menu_btn {
-  padding: 5px 15px;
   color: var(--primary-white);
   border-style: none;
   font-size: var(--step-4);
   transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* .btn-open {
-  color: var(--secondary-black);
-} */
 
 
 
 
 /* Desktop Styling */
 @media screen and (min-width: 1024px) {
+
   .header_desktop_bg {
     background: var(--primary-white);
     margin-top: 40px;
     opacity: 0.9;
-    padding: 16px 0;
+   
   }
 
-  .logo a {
-    color: var(--secondary-black);
+  
+.logo .logo_desktop {
+    display: block;
+    width: 100px;
+    height: 100%;
+  }
+
+  .logo .logo_mobile {
+    display: none;
   }
 
   .desktop_nav_item {
     display: block;
     display: flex;
     gap: 20px;
-    margin-left: 100px;
-   
   }
 
   .desktop_nav_item a {
@@ -209,16 +244,12 @@ export default {
 
   }
 
-  .desktop_nav_item a:hover {
+  .desktop_nav_item > a:hover {
    background: var(  --tertiary-pink-accent-2);
    color: white;
 
   }
 
-  /* .desktop_nav_item a:active {
-    background: var(  --tertiary-pink-accent-2);
-    color: white;
-  } */
 
   .mobile_nav_item {
     display: none;
@@ -233,7 +264,7 @@ export default {
 .desktop_nav_item ul {
   display: flex;
   gap: 20px;
-  margin-left: 60px;
+  margin-left: 130px;
   color: black;
   align-items: center;
 }
@@ -243,8 +274,9 @@ export default {
   font-size: var(--step-0);
   font-weight: 400;
   transition: all ease-in-out 0.3s;
-  color: black;
+  /* color: black; */
 }
+
 
 
 /* screen larger than 1440px */
