@@ -1,7 +1,10 @@
 <template>
 <div class="partner_outer_container">
     <div v-for= 'partner in partners' :key='partner.id'   class="partner_img_container">
-        <img :src="partner.imgUrl" :alt="partner.name">
+        <a :href="partner.href">
+            <img :src="partner.imgUrl" :alt="partner.name">
+        </a>
+        
     </div>
 </div>
 </template>
@@ -16,6 +19,9 @@ import Unreal from '../assets/image/Unreal.avif'
 import VezaNFT from '../assets/image/VezaNFT.avif'
 import KleverKid from '../assets/image/KleverKid.avif'
 import Lucky_Unicorn from '../assets/image/Lucky_Unicorn.avif'
+import NFT_KULT from '../assets/image/NFT-KULT.avif'
+import Mobility from '../assets/image/MobilityGood.avif'
+import Blockem from '../assets/image/Blockem.avif'
 
 
 export default {
@@ -25,44 +31,73 @@ export default {
         const partners = reactive([
             {
                 id: 1,
-                name: 'Epicgames',
-                imgUrl: EpicGame,
+                name: 'VezaNFT',
+                imgUrl: VezaNFT,
+                href: "https://twitter.com/VezaNFT",
             },
             {
                 id: 2,
                 name: 'Myria',
                 imgUrl: Myria,
+                href: "https://twitter.com/Myria",
             },
             {
                 id: 3,
-                name: 'Klever',
-                imgUrl: Klever,
+                name: 'Rockpaper',
+                imgUrl: Rockpaper,
+                href: "https://twitter.com/RP_Sasquatch",
             },
             {
                 id: 4,
-                name: 'Rockpaper',
-                imgUrl: Rockpaper,
+                name: 'NFT_KULT',
+                imgUrl: NFT_KULT,
+                href: "https://twitter.com/NFT_KULT",
             },
             {
                 id: 5,
-                name: 'Unreal Engine',
-                imgUrl: Unreal
+                name: 'Mobility',
+                imgUrl: Mobility,
+                href: "https://twitter.com/MobilizingGood",
             },
             {
                 id: 6,
-                name: 'VezaNFT',
-                imgUrl: VezaNFT,
+                name: 'Blockem',
+                imgUrl: Blockem,
+                href: "https://twitter.com/Blockem_eth",
             },
             {
                 id: 7,
                 name: 'KleverKid',
                 imgUrl: KleverKid,
+                href: "https://twitter.com/kleverkid_coin",
             },
             {
                 id: 8,
                 name: 'Lucky_Unicorn',
                 imgUrl: Lucky_Unicorn,
-            }
+                href: "#",
+            },
+             {
+                id: 9,
+                name: 'Unreal',
+                imgUrl: Unreal,
+                href: "https://twitter.com/UnrealEngine",
+            },
+            
+            {
+                id: 10,
+                name: 'Klever',
+                imgUrl: Klever,
+                href: "https://twitter.com/klever_io",
+            },
+           
+            {
+                id: 11,
+                name: 'EpicGame',
+                imgUrl: EpicGame,
+                href: "https://twitter.com/EpicGames",
+            },
+            
         ])
         
         return { partners}

@@ -12,20 +12,37 @@
         </div>
         <div>
             <ul class="social_container">
-                <li>Twitter</li>
-                <li>Discord</li>
-                <li>Telegram</li>
-                <li>Youtube</li>
+                <li>
+                    <a href="https://twitter.com/Hypatia_Games">
+                        <font-awesome-icon icon="fa-brands fa-twitter" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                      <font-awesome-icon icon="fa-brands fa-discord" />
+                    </a>
+                </li>
+                <li>
+                     <a href="">
+                      <font-awesome-icon icon="fa-brands fa-telegram" />
+                    </a>
+                </li>
+                <li>
+                     <a href="">
+                      <font-awesome-icon icon="fa-brands fa-youtube" />
+                    </a>
+                </li>
             </ul>
         </div>
       </div>
-      <hr class="horizontal">
       <div class="footer_content_container">
         <div class="footer_logo">
-          <h3>Company</h3>
+            <div>
+                <img src="../assets/image/hypatia_full__logo_w.avif" alt="footer_logo">
+            </div>
+         
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-              voluptates!
+             <font-awesome-icon icon="fa-regular fa-copyright" />2023 Hypatia Games Studio
             </p>
          
         </div>
@@ -36,9 +53,10 @@
             </div>
             <div>
                 <ul>
-                    <li>About</li>
+                    <li>
+                    <a href="#about" target="_top">About</a>
+                        </li>
                     <li>Team</li>
-                    <li>Ecosystem</li>
                     <li>Whitepaper</li>
                     <li>Games</li>
                 </ul>
@@ -49,7 +67,10 @@
   </div>
 </template>
 
-<script setup>
+<script >
+export default {
+  name: 'Footer',
+}
 </script>
 
 <style scoped>
@@ -90,7 +111,7 @@
 
 .social_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 30px;
 }
 
@@ -103,6 +124,8 @@
 
 .social_container li {
 list-style-type: none;
+font-size: var(--step-4);
+
 }
 
 .horizontal {
@@ -118,9 +141,9 @@ list-style-type: none;
 }
 }
 
-.footer_logo h3 {
-    font-size: var(--step-2);
-    margin-bottom: 10px;
+/* footer logo */
+.footer_logo img {
+   width: 100px;
 }
 
 .footer_logo p {

@@ -94,7 +94,7 @@
     <section class="about_ecosystem">
       <div class="about_ecosystem_container">
         <div class="about_ecosystem_heading">
-          <h2>Other Ecosystem</h2>
+          <h2>The Ecosystem</h2>
           <p>
             Building the industry's deepest and most interconnected ecosystem.
             Our ecosystem is made up of some of the best projects backed by
@@ -139,23 +139,11 @@
       </div>
     </section>
 
-    <!-- Join Us -->
+    <!-- Team Section -->
+    <section>
+      <Team />
+    </section>
 
-    <!-- <section class="join_us">
-      <div class="join_us_container">
-        <div class="join_us_content">
-          <h2>Join Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            voluptas qui quibusdam natus nulla dolores. Culpa praesentium eum
-            omnis aperiam!
-          </p>
-          <div class="join_us_btn">
-            <button>JOIN US</button>
-          </div>
-        </div>
-      </div>
-    </section> -->
   </main>
 </template>
 

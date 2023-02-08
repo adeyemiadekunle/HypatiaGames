@@ -21,13 +21,13 @@
         <div class="profile_item">
           <div><h3>SYMBOL</h3></div>
           <div>
-            <img src="" alt="">
+            <img src="../assets/image/hypatialogo.avif" alt="">
             <span>$HGT</span></div>
         </div>
         <div class="profile_item">
           <div><h3>CHAIN</h3></div>
           <div>
-             <img src="" alt="">
+             <img src="../assets/image/klevers.avif" alt="">
             <span>KLEVER</span></div>
         </div>
         <div class="profile_item">
@@ -72,39 +72,39 @@
               event, investors will deposit funds into a pool, and by the end of
               the event, the allocated HGT for that particular ICO/Presale will
               be distributed to investors’ wallets weighted by their deposit in
-              the pool.</span
+              the pool</span
             >
           </li>
           <li>
             <b>Project Development:</b>
             <span
               >17.76 million HGT will be used by the team for the production of
-              Flaming Wheelz.</span
+              Flaming Wheelz</span
             >
           </li>
           <li>
             <b>Foundation:</b>
-            <span>17.76 million HGT will be held by the foundation.</span>
+            <span>17.76 million HGT will be held by the foundation</span>
           </li>
           <li>
             <b>Marketing:</b>
             <span
               >8.88 million HGT will be used by the team towards promoting
-              Hypatia.</span
+              Hypatia</span
             >
           </li>
           <li>
             <b>Core Team:</b>
             <span
               >17.76 million HGT will be locked for 4 years, and proportionally
-              vested 10% every year.</span
+              vested 10% every year</span
             >
           </li>
           <li>
             <b>Legal:</b>
             <span
               >4.44 million HGT will be allocated for legal matters and
-              emergency funds.</span
+              emergency funds</span
             >
           </li>
 
@@ -112,33 +112,33 @@
             <b>Partnerships/Early investors Benefits:</b>
             <span
               >1.5 million HGT will be distributed to participants of the
-              private sale and presale.
+              private sale and presale
             </span>
           </li>
           <li>
             <b>Exchange:</b>
-            <span>26.64 million HGT will be used for Liquidity.</span>
+            <span>26.64 million HGT will be used for Liquidity</span>
           </li>
           <li>
             <b>Charity:</b>
             <span
               >3.108 million HGT has been set aside to help embark on our
               charitable mission to help reduce or if possible eliminate suicide
-              and to support mental health centers.</span
+              and to support mental health centers</span
             >
           </li>
           <li>
             <b>Giveaways:</b>
-            <span>444 thousand HGT will cover giveaways for over 14 years.</span>
+            <span>444 thousand HGT will cover giveaways for over 14 years</span>
           </li>
 
           <li>
              <b>Advisors:</b>
-            <span>2.5 million HGT will be given to our advisors and will be vested 5% every 6 months.</span>
+            <span>2.5 million HGT will be given to our advisors and will be vested 5% every 6 months</span>
           </li>
           <li>
              <b>Staking and Play and Earn:</b>
-            <span>278.388 Million HGT will be used as rewards inside the game and staking incentivess.</span>
+            <span>278.388 Million HGT will be used as rewards inside the game and staking incentivess</span>
           </li>
         </ul>
       </div>
@@ -242,6 +242,14 @@
   font-weight: 300;
 }
 
+.profile_item img{
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 5px;
+  margin-bottom: -2px;
+}
+
 /* Tokenomics */
 
 .tokenomics {
@@ -281,7 +289,7 @@
 
 @media screen and (min-width: 1024px) {
   .tokenomics_container > div:nth-of-type(2) {
-    width: 80%;
+    width: 70%;
   }
 }
 
