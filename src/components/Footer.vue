@@ -136,8 +136,10 @@ font-size: var(--step-4);
     
 .footer_content_container {
     /* border: 1px solid red; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    display: flex;
+    justify-content: space-between;
 }
 }
 
@@ -167,7 +169,7 @@ font-size: var(--step-4);
 
 .contact_us p  {
     font-size: var(--step--1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 
@@ -189,12 +191,6 @@ font-size: var(--step-4);
     font-size: var(--step--1);
 }
 
-@media screen and (min-width: 1024px) {
-    
-.footer_others {
-    margin-left: 150px;
 
-}
-}
 
 </style>

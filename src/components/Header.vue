@@ -2,15 +2,27 @@
   <header class="header" v-bind:class="{ 'header-open': showMenu }">
     <div class="header_desktop_bg">
       <div class="header_container">
-        <div class="logo" >
+        <div class="logo">
           <router-link @click="closeMenu" to="/">
-          <img class="logo_desktop" src="../assets/image/hypatia_full__logo_b.avif" alt="Logo">
-          <img  class="logo_mobile" src="../assets/image/hypatia_full__logo_w.avif" alt="">
+            <img
+              class="logo_desktop"
+              src="../assets/image/hypatia_full__logo_b.avif"
+              alt="Logo"
+            />
+            <img
+              class="logo_mobile"
+              src="../assets/image/hypatia_full__logo_w.avif"
+              alt=""
+            />
           </router-link>
         </div>
 
         <div>
-          <nav class="mobile_nav_item" v-if="showMenu" v-bind:class="{ 'menu-hidden': !showMenu }">
+          <nav
+            class="mobile_nav_item"
+            v-if="showMenu"
+            v-bind:class="{ 'menu-hidden': !showMenu }"
+          >
             <div class="mobile_nav_container">
               <router-link @click="closeMenu" to="/">HOME</router-link>
               <a href="#" target="_top">GAMES</a>
@@ -20,36 +32,67 @@
             </div>
           </nav>
           <!-- Mobile Icon -->
-          <div @click="toggleMenu" class="menu_btn" v-bind:class="{ 'btn-open': showMenu }">
+          <div
+            @click="toggleMenu"
+            class="menu_btn"
+            v-bind:class="{ 'btn-open': showMenu }"
+          >
             <font-awesome-icon icon=" fa-solid fa-bars" />
           </div>
 
-        <!-- Desktop View -->
+          <!-- Desktop View -->
           <nav class="desktop_nav_item">
-            <router-link to="/">HOME</router-link>
-            <a href="#" target="_top">GAMES</a>
-            <router-link to="/hgt">HGT TOKEN</router-link>
-            <!-- <a href="#about" target="_top">ABOUT</a> -->
-            <a href="#" target="_top">WHITEPAPER</a>
-            <ul>
+            <ul class="desktop_nav_list">
+              <li class="nav_item">
+                <router-link to="/">HOME</router-link>
+              </li>
+
+              <li  class="nav_item">
+                <a href="#" @click="toggleDropdown" >GAMES</a>
+                <ul v-if="showDropdown" class="dropdown"  >
+                  <li>
+                    <a href="https://flamingwheelz.com/" target="_blank">FlamingWheelz</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav_item">
+                <router-link to="/hgt">HGT TOKEN</router-link>
+              </li>
+
+              <li  class="nav_item">
+                <a href="#" @click="toggleDropdown" >WHITEPAPER</a>
+                <ul v-if="showDropdown" class="dropdown"  >
+                  <li>
+                    <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/" target="_blank
+                    ">Hypatia Games</a>
+                  </li>
+                  <li>
+                    <a href="https://hypatia-games.gitbook.io/flaming-book/" target="_blank">FlamingWheelz</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav_social_list">
               <li>
-               <a href="https://twitter.com/Hypatia_Games">
-                        <font-awesome-icon icon="fa-brands fa-twitter" />
+                <a href="https://twitter.com/Hypatia_Games">
+                  <font-awesome-icon icon="fa-brands fa-twitter" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                        <font-awesome-icon icon="fa-brands fa-discord" />
+                  <font-awesome-icon icon="fa-brands fa-discord" />
                 </a>
               </li>
               <li>
-                  <a href="#">
-                        <font-awesome-icon icon="fa-brands fa-telegram" />
-                 </a>
+                <a href="#">
+                  <font-awesome-icon icon="fa-brands fa-telegram" />
+                </a>
               </li>
               <li>
                 <a href="#">
-                        <font-awesome-icon icon="fa-brands fa-youtube" />
+                  <font-awesome-icon icon="fa-brands fa-youtube" />
                 </a>
               </li>
             </ul>
@@ -61,13 +104,13 @@
 </template>
 
 <script >
-
 import { ref } from "vue";
 
 export default {
   name: "Header",
   setup() {
     let showMenu = ref(false);
+    let showDropdown = ref(false);
 
     const toggleMenu = () => {
       showMenu.value = !showMenu.value;
@@ -86,20 +129,23 @@ export default {
       }
     };
 
+    const toggleDropdown = () => {
+      showDropdown.value = !showDropdown.value;
+    }
+
     return {
       showMenu,
       toggleMenu,
       closeMenu,
+      toggleDropdown,
+      showDropdown,
     };
   },
-
-}
+};
 </script>
 
 
 <style scoped>
-
-
 .header {
   position: relative;
   height: 6rem;
@@ -121,27 +167,22 @@ export default {
 }
 
 .logo .logo_desktop {
-   display: none;
-  }
+  display: none;
+}
 
 .logo .logo_mobile {
   display: block;
   width: 80px;
   height: 100%;
-  
-  
 }
 
 /* Lower than 1024px  */
 @media screen and (max-width: 1024px) {
   .header_container {
-     justify-content: space-between;
-     /* border: 1px solid green; */
+    justify-content: space-between;
+    /* border: 1px solid green; */
   }
-  
 }
-
-
 
 /* Mobile Styling */
 .mobile_nav_item {
@@ -155,8 +196,6 @@ export default {
   background-color: var(--secondary-black);
 }
 
-
-
 .mobile_nav_container {
   display: flex;
   flex-direction: column;
@@ -164,7 +203,6 @@ export default {
   padding: 10px 0;
   width: 95%;
   margin: 0 auto;
- 
 }
 
 .mobile_nav_item .mobile_nav_container a {
@@ -178,7 +216,7 @@ export default {
 }
 
 .mobile_nav_item .mobile_nav_container a:hover {
-  background: var(  --tertiary-pink-accent-2);
+  background: var(--tertiary-pink-accent-2);
 }
 
 .desktop_nav_item {
@@ -192,7 +230,7 @@ export default {
 .header-open {
   background: var(--secondary-black);
   border-bottom: 1px solid var(--primary-white-soft);
-   /* border: 1px solid red; */
+  /* border: 1px solid red; */
 }
 
 .menu_btn {
@@ -205,21 +243,25 @@ export default {
   align-items: center;
 }
 
-
-
-
 /* Desktop Styling */
 @media screen and (min-width: 1024px) {
+ 
+ 
+  .mobile_nav_item {
+    display: none;
+  }
+
+  .menu_btn {
+    display: none;
+  }
 
   .header_desktop_bg {
     background: var(--primary-white);
     margin-top: 40px;
     opacity: 0.9;
-   
   }
 
-  
-.logo .logo_desktop {
+  .logo .logo_desktop {
     display: block;
     width: 100px;
     height: 100%;
@@ -232,36 +274,62 @@ export default {
   .desktop_nav_item {
     display: block;
     display: flex;
-    gap: 20px;
   }
 
-  .desktop_nav_item a {
+  .desktop_nav_list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 10px;
+  }
+
+  .desktop_nav_list li a {
     color: var(--secondary-black);
     font-size: var(--step-0);
     font-weight: 400;
     transition: all ease-in-out 0.3s;
-    padding:  10px;
-
+    padding: 10px;
   }
-
-  .desktop_nav_item > a:hover {
-   background: var(  --tertiary-pink-accent-2);
-   color: white;
-
-  }
-
-
-  .mobile_nav_item {
-    display: none;
-  }
-
-  .menu_btn {
-    display: none;
-  }
+   
+   .desktop_nav_list .nav_item > a:hover {
+      background: var(--tertiary-pink-accent-2);
+      color: white;
+   }
+  
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: var(--tertiary-pink-accent-2);
+  z-index: 1;
+  padding: 10px 0;
+  list-style: none;
 }
 
+.dropdown li {
+  padding-top: 10px;
+}
+
+.dropdown li a{
+   color: white;
+   font-size: var(--step--1);
+}
+
+.nav_item:hover .dropdown {
+  display: block;
+
+}
+
+
+
+
+}
+
+
+
 /* Social icon */
-.desktop_nav_item ul {
+
+.desktop_nav_item .nav_social_list {
   display: flex;
   gap: 20px;
   margin-left: 130px;
@@ -269,12 +337,16 @@ export default {
   align-items: center;
 }
 
-.desktop_nav_item ul li {
+.desktop_nav_item .nav_social_list li {
   list-style-type: none;
   font-size: var(--step-0);
   font-weight: 400;
   transition: all ease-in-out 0.3s;
-  /* color: black; */
+ 
+}
+
+.desktop_nav_item .nav_social_list li a {
+  color: black;
 }
 
 

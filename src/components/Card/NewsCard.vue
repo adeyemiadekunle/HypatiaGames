@@ -48,7 +48,7 @@ export default {
 }
 
 .news_card img {
-  height: 200px;
+ height: 200px; 
   border-radius: 8px;
 }
 
@@ -59,7 +59,7 @@ export default {
 
 .text_container a {
   text-decoration: underline;
-  color: brown;
+  color: grey;
   padding-top: 15px;
   font-size: var(--step--1);
 }

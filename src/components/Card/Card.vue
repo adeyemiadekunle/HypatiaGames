@@ -1,21 +1,29 @@
 <template>
   <div class="card_container">
     <div class="card">
-      <img
-        src="https://picsum.photos/800/600?random=2"
-        alt="Avatar"
-        style="width: 100%"
-      />
+      <div class="card_img_container">
+        <img
+          :src="imgUrl"
+          :alt="alt"
+          style="width: 100%"
+        />
+        <p class="status">{{status}} </p>
+      </div>
       <div class="container">
-        <h4><b>Dex Exchange</b></h4>
-        <p>Architect & Engineer</p>
+        <h3><b>{{title}}</b></h3>
+        <p>
+          {{text}}
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'Card',
+  props: ['imgUrl', 'status', 'title', 'text', 'alt']
+};
 </script>
 
 <style>
@@ -30,14 +38,29 @@ export default {};
   margin: auto;
   border: 1px solid white;
   border-radius: 5px;
+  height: 400px;
 }
 
-/* .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-} */
+.card_img_container img {
+  height: 250px;
+  position: relative;
+  filter: blur(20px);
+  
+}
+
+.card_img_container .status {
+  position: absolute;
+  top: 0;
+  padding-left: 15px;
+  padding-top: 15px;
+}
 
 .container {
-  padding: 10px 16px;
+  padding: 16px 16px;
   color: white;
+}
+
+.container p {
+  font-weight: 300;
 }
 </style>

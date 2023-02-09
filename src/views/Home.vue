@@ -12,9 +12,9 @@
           <h2>We are Hypatia Games</h2>
           <div></div>
           <p>
-            Hypatia Games is a developing game studio, an innovative
+            Hypatia Games is an innovative
             blockchain-based real-life umbrella group of businesses that allows
-            investors to earn passive income. is the next-generation blockchain
+            investors to earn passive income. It is the next-generation blockchain
             solution that seamlessly blends the best of web2 and web3
             technology. Our platform offers unparalleled security, transparency,
             and decentralization, powered by real-world asset backing.
@@ -67,7 +67,7 @@
             Hypatia Game Token is a decentralized, and governance token in
             Hypatia Game ecosystem, providing a sustainable economic model for the
             ecosystem. It is a utility token that can be used to pay for in-game
-            items, services, and other in-game activities.
+            items, services, and other ecosystem activities.
           </p>
           <div class="about_hgt_btn_container">
             <router-link to="/hgt">
@@ -456,6 +456,8 @@ export default {
 .about_ecosystem_container {
   width: 90%;
   margin-top: 70px;
+  margin-bottom: 50px;
+  /* border: 1px solid red; */
 }
 
 .about_ecosystem_heading {
@@ -515,8 +517,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20px; */
-  /* border: 1px solid green; */
+  margin-bottom: 50px;
+ 
 }
 
 /* Max screen of 768px */
@@ -571,7 +573,7 @@ export default {
 
 .news_heading a {
   text-decoration: underline;
-  color: brown;
+  color:  grey;
 }
 
 .news_list {
