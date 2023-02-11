@@ -55,6 +55,8 @@ components: {Splide, SplideSlide},
       lazyLoad: true,
       type  : 'fade',
       speed: 3000,
+      easing: 'ease',
+     
     }
 
  
@@ -69,6 +71,17 @@ components: {Splide, SplideSlide},
 
 .splide__slide {
   position: relative;
+}
+
+.splide__slide {
+  height: 650px !important;
+}
+
+@media screen and (min-width: 1440px) {
+  .splide__slide {
+    height: 700px !important;
+  }
+  
 }
 
 .splide__slide h1 {
@@ -87,6 +100,8 @@ components: {Splide, SplideSlide},
 .hero_image {
   object-fit: cover;
   object-position: 15% 100%;
+  width: 100%;
+  height: 100%;
 }
 
 

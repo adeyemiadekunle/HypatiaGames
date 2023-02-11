@@ -39,6 +39,7 @@ export default {
   border: 1px solid white;
   border-radius: 5px;
   height: 400px;
+  max-width: 400px;
 }
 
 .card_img_container img {
@@ -58,6 +59,7 @@ export default {
 .container {
   padding: 16px 16px;
   color: white;
+  height: 100%;
 }
 
 .container p {

@@ -12,31 +12,40 @@
             <img
               class="logo_mobile"
               src="../assets/image/hypatia_full__logo_w.avif"
-              alt=""
+              alt="Logo"
             />
           </router-link>
         </div>
 
         <div>
-          <nav
-            class="mobile_nav_item"
-            v-if="showMenu"
-            v-bind:class="{ 'menu-hidden': !showMenu }"
-          >
+          <nav class="mobile_nav" v-if="showMenu" v-bind:class="{ 'menu-hidden': !showMenu }">
             <div class="mobile_nav_container">
-              <router-link @click="closeMenu" to="/">HOME</router-link>
-              <a href="#" target="_top">GAMES</a>
-              <router-link @click="closeMenu" to="/hgt">HGT TOKEN</router-link>
-              <!-- <a  @click="closeMenu" href="#about" target="_top">ABOUT</a> -->
-              <a href="#" target="_top">WHITEPAPER</a>
+              <ul class="mobile_nav_list">
+                <li>
+                      <router-link @click="closeMenu" to="/">HOME</router-link>
+                </li>
+                <li class="dropdown_mobile">
+                   <a href="#" class="dropbtn">GAMES</a>
+                    <div class="dropdown_content_mobile">
+                      <a href="https://flamingwheelz.com/" target="_blank">FlamingWheelz</a> 
+                    </div>
+                </li>
+                <li>
+                      <router-link @click="closeMenu" to="/hgt">HGT TOKEN</router-link>
+                </li>
+                <li class="dropdown_mobile">
+                     <a href="#"  class="dropbtn">WHITEPAPER</a>
+                      <div class="dropdown_content_mobile">
+                        <a href="https://hypatia-games.gitbook.io/flaming-book/" target="_blank">FlamingWheelz</a> 
+                        <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/" target="_blank">Hypatia Games</a> 
+                      </div>
+                </li>
+              </ul>
             </div>
           </nav>
+
           <!-- Mobile Icon -->
-          <div
-            @click="toggleMenu"
-            class="menu_btn"
-            v-bind:class="{ 'btn-open': showMenu }"
-          >
+          <div @click="toggleMenu" class="menu_btn" v-bind:class="{ 'btn-open': showMenu }">
             <font-awesome-icon icon=" fa-solid fa-bars" />
           </div>
 
@@ -47,51 +56,44 @@
                 <router-link to="/">HOME</router-link>
               </li>
 
-              <li  class="nav_item">
-                <a href="#" @click="toggleDropdown" >GAMES</a>
-                <ul v-if="showDropdown" class="dropdown"  >
-                  <li>
-                    <a href="https://flamingwheelz.com/" target="_blank">FlamingWheelz</a>
-                  </li>
-                </ul>
+              <li class="dropdown">
+                <a href="#" class="dropbtn">GAMES</a>
+                <div class="dropdown-content">
+                  <a href="https://flamingwheelz.com/" target="_blank">FlamingWheelz</a> 
+                </div>
               </li>
 
               <li class="nav_item">
                 <router-link to="/hgt">HGT TOKEN</router-link>
               </li>
 
-              <li  class="nav_item">
-                <a href="#" @click="toggleDropdown" >WHITEPAPER</a>
-                <ul v-if="showDropdown" class="dropdown"  >
-                  <li>
-                    <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/" target="_blank
-                    ">Hypatia Games</a>
-                  </li>
-                  <li>
-                    <a href="https://hypatia-games.gitbook.io/flaming-book/" target="_blank">FlamingWheelz</a>
-                  </li>
-                </ul>
+              <li class="dropdown">
+                <a href="#"  class="dropbtn">WHITEPAPER</a>
+                <div class="dropdown-content">
+                  <a href="https://hypatia-games.gitbook.io/flaming-book/" target="_blank">FlamingWheelz</a> 
+                  <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/" target="_blank">Hypatia Games</a> 
+                </div>
               </li>
             </ul>
 
             <ul class="nav_social_list">
               <li>
-                <a href="https://twitter.com/Hypatia_Games">
+                <a href="https://twitter.com/Hypatia_Games" target="_blank">
                   <font-awesome-icon icon="fa-brands fa-twitter" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://discord.com/invite/v5R6Cf5NGW" target="_blank">
                   <font-awesome-icon icon="fa-brands fa-discord" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://discord.com/invite/v5R6Cf5NGW" target="_blank">
                   <font-awesome-icon icon="fa-brands fa-telegram" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.youtube.com/@hypatiagames" target="_blank">
                   <font-awesome-icon icon="fa-brands fa-youtube" />
                 </a>
               </li>
@@ -110,7 +112,6 @@ export default {
   name: "Header",
   setup() {
     let showMenu = ref(false);
-    let showDropdown = ref(false);
 
     const toggleMenu = () => {
       showMenu.value = !showMenu.value;
@@ -129,16 +130,10 @@ export default {
       }
     };
 
-    const toggleDropdown = () => {
-      showDropdown.value = !showDropdown.value;
-    }
-
     return {
       showMenu,
       toggleMenu,
       closeMenu,
-      toggleDropdown,
-      showDropdown,
     };
   },
 };
@@ -185,7 +180,7 @@ export default {
 }
 
 /* Mobile Styling */
-.mobile_nav_item {
+.mobile_nav {
   position: fixed;
   top: 6rem;
   left: 0;
@@ -196,29 +191,67 @@ export default {
   background-color: var(--secondary-black);
 }
 
-.mobile_nav_container {
+.mobile_nav_list {
   display: flex;
   flex-direction: column;
-  /* gap: 30px; */
-  padding: 10px 0;
-  width: 95%;
-  margin: 0 auto;
+  list-style: none;
+  align-items: center;
 }
 
-.mobile_nav_item .mobile_nav_container a {
+.mobile_nav_list li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile_nav .mobile_nav_list li a {
   color: var(--primary-white);
   font-size: var(--step-1);
   width: 100%;
   font-weight: 400;
   text-align: center;
-  padding: 15px;
-  transition: all ease-in-out 0.3s;
+  padding: 20px;
+  transition: all ease-in-out 0.5s;
 }
 
-.mobile_nav_item .mobile_nav_container a:hover {
+.mobile_nav_list li a:hover {
   background: var(--tertiary-pink-accent-2);
 }
 
+
+.dropdown_content_mobile {
+  display: none;
+  /* border: 1px solid red; */
+}
+
+.dropdown_content_mobile a {
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  font-size: var(--step-1) !important;
+  transition:  all ease-in-out 0.5s;
+  border: 1px solid  var(--secondary-black-soft);
+  background: var(--secondary-black-soft);
+}
+
+.dropdown_content_mobile a:hover {
+  background: var(--secondary-black-soft) !important;
+  color: var(--tertiary-pink-accent-2) !important;
+}
+
+.dropdown_mobile:hover .dropdown_content_mobile {
+    display: block;
+    transition:  all ease-in-out 0.5s;
+  
+}
+.dropdown_mobile:hover > a {
+  background-color: var(--tertiary-pink-accent-2);
+  color: var(--primary-white);
+}
+
+
+
+/* desktop not to display on mobile */
 .desktop_nav_item {
   display: none;
 }
@@ -243,11 +276,11 @@ export default {
   align-items: center;
 }
 
+
+
 /* Desktop Styling */
 @media screen and (min-width: 1024px) {
- 
- 
-  .mobile_nav_item {
+  .mobile_nav {
     display: none;
   }
 
@@ -284,6 +317,10 @@ export default {
     padding: 10px;
   }
 
+  .desktop_nav_list li {
+    padding:  8px 0;
+  }
+
   .desktop_nav_list li a {
     color: var(--secondary-black);
     font-size: var(--step-0);
@@ -291,41 +328,50 @@ export default {
     transition: all ease-in-out 0.3s;
     padding: 10px;
   }
-   
-   .desktop_nav_list .nav_item > a:hover {
-      background: var(--tertiary-pink-accent-2);
-      color: white;
-   }
-  
-.dropdown {
+
+  .desktop_nav_list .nav_item > a:hover {
+    background: var(--tertiary-pink-accent-2);
+    color: white;
+  }
+
+.dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--tertiary-pink-accent-2);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  padding: 10px 0;
-  list-style: none;
 }
 
-.dropdown li {
-  padding-top: 10px;
-}
-
-.dropdown li a{
-   color: white;
-   font-size: var(--step--1);
-}
-
-.nav_item:hover .dropdown {
+.dropdown-content a {
+  float: none;
+  padding: 10px 10px !important;
+  text-decoration: none;
   display: block;
-
+  text-align: left;
+  font-size: 16px !important;
+  background: var(--secondary-black-soft);
+  color: var(--primary-white) !important;
 }
 
-
-
-
+.dropdown-content a:hover {
+  color: var(--tertiary-pink-accent-2) !important;
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
+.dropdown:hover > a {
+  background-color: var(--tertiary-pink-accent-2);
+  color: var(--primary-white)
+}
+
+.dropdown-content a:nth-of-type(1){
+  padding-top: 30px !important;
+  margin-bottom: -8px;
+}
+
+}
 
 /* Social icon */
 
@@ -342,19 +388,16 @@ export default {
   font-size: var(--step-0);
   font-weight: 400;
   transition: all ease-in-out 0.3s;
- 
 }
 
 .desktop_nav_item .nav_social_list li a {
   color: black;
 }
 
-
-
 /* screen larger than 1440px */
 @media screen and (min-width: 1440px) {
   .header_container {
-    width: 85%;
+    width: 80%;
   }
 }
 </style>

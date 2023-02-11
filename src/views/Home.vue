@@ -10,15 +10,20 @@
       <div class="about_container">
         <div class="about_content">
           <h2>We are Hypatia Games</h2>
-          <div></div>
           <p>
-            Hypatia Games is an innovative
-            blockchain-based real-life umbrella group of businesses that allows
-            investors to earn passive income. It is the next-generation blockchain
-            solution that seamlessly blends the best of web2 and web3
-            technology. Our platform offers unparalleled security, transparency,
-            and decentralization, powered by real-world asset backing.
-            Experience the future of finance and investment, today.
+            Hypatia Games is an innovative blockchain-based real-life umbrella
+            group of businesses that allows investors to earn passive income. It
+            is the next-generation blockchain solution that seamlessly blends
+            the best of web2 and web3 technology. Our platform offers
+            unparalleled security, transparency, and decentralization, powered
+            by real-world asset backing. Experience the future of finance and
+            investment, today.
+          </p>
+          <h2>Our Mission</h2>
+          <p>
+            "Our mission is to empower players and revolutionize the gaming
+            industry through decentralized technology, fostering player
+            ownership, creativity, and community building."
           </p>
           <!-- <button>ABOUT US</button> -->
           <!-- <router-link to="/about">
@@ -65,9 +70,9 @@
           <h2>Hypatia Games Token</h2>
           <p>
             Hypatia Game Token is a decentralized, and governance token in
-            Hypatia Game ecosystem, providing a sustainable economic model for the
-            ecosystem. It is a utility token that can be used to pay for in-game
-            items, services, and other ecosystem activities.
+            Hypatia Game ecosystem, providing a sustainable economic model for
+            the ecosystem. It is a utility token that can be used to pay for
+            in-game items, services, and other ecosystem activities.
           </p>
           <div class="about_hgt_btn_container">
             <router-link to="/hgt">
@@ -103,8 +108,9 @@
           </p>
         </div>
         <div class="about_ecosystem_btn_cont">
-          <!-- <button>LEARN MORE</button> -->
-          <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/ecosystem">
+          <a
+            href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/ecosystem"
+          >
             <PrimaryButton>Whitepaper</PrimaryButton>
           </a>
         </div>
@@ -126,6 +132,20 @@
       </div>
     </section>
 
+    <section class="trailer">
+      <div class="trailer_container">
+        <div class="video_container">
+          <iframe
+            src="https://youtube.com/embed/86YGwKngdCY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- News Section -->
     <section class="news">
       <div class="news_container">
@@ -139,11 +159,7 @@
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section>
-      <Team />
-    </section>
-
+    
   </main>
 </template>
 
@@ -154,6 +170,8 @@ import NewsSection from "../components/NewsSection.vue";
 import PartnerList from "../components/PartnerList.vue";
 import PrimaryButton from "../components/Button/PrimaryButton.vue";
 import SecondaryButton from "../components/Button/SecondaryButton.vue";
+import {useHead} from "@unhead/vue";
+
 export default {
   name: "Home",
 
@@ -164,7 +182,31 @@ export default {
     PartnerList,
     PrimaryButton,
     SecondaryButton,
+    useHead,
   },
+
+  
+  setup () {
+    useHead({
+      title: "Hypatia Games| Redefining Web3 Gaming Experience",
+      meta: [
+        {
+          name: "description",
+          content: "Hypatia Games is a decentralized gaming ecosystem.",
+        },
+        {
+          name: "keywords",
+          content: "Hypatia Games, Hypatia Games Token, HGT, Web3 Gaming",
+        }, 
+      ],
+    });
+
+    return {
+      useHead,
+    };
+  },
+
+
 };
 </script>
 
@@ -195,9 +237,15 @@ export default {
   justify-content: center;
   height: 100%;
   margin-top: 20px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
+  .about_container {
+    width: 80%;
+  }
+}
 .about_content {
   display: flex;
   flex-direction: column;
@@ -213,7 +261,7 @@ export default {
   white-space: wrap;
   text-align: center;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
   color: white;
 }
@@ -226,7 +274,7 @@ export default {
 
 .about_content p {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: var(--step-1);
   color: white;
 }
@@ -294,9 +342,17 @@ export default {
   align-items: center;
 }
 
+/* screen larger than 1024px */
 @media screen and (min-width: 1024px) {
   .text_overlay .text_content {
     width: 80%;
+  }
+}
+
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
+  .text_overlay .text_content {
+    width: 75%;
   }
 }
 
@@ -350,7 +406,7 @@ export default {
 /* Larger screen than 1440px */
 @media screen and (min-width: 1440px) {
   .about_hgt_container {
-    width: 85%;
+    width: 80%;
   }
 }
 
@@ -454,15 +510,35 @@ export default {
 }
 
 .about_ecosystem_container {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 70px;
   margin-bottom: 50px;
-  /* border: 1px solid red; */
+  width: 95%;
+}
+
+@media screen and (min-width: 1024px) {
+  .about_ecosystem_container {
+    width: 100%;
+  }
+}
+
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
+  .about_ecosystem_container {
+    width: 90%;
+  }
 }
 
 .about_ecosystem_heading {
-  width: 100%;
-  /* margin-top: 50px; */
+  width: 90%;
+}
+
+@media screen and (min-width: 1024px) {
+  .about_ecosystem_heading {
+    width: 90%;
+  }
 }
 
 .about_ecosystem_heading h2 {
@@ -490,24 +566,27 @@ export default {
 .about_ecosystem_card_con {
   height: 100%;
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .about_ecosystem_card_con {
+    width: 100%;
+  }
 }
 
 /* The Partner */
 .partner {
   min-height: 500px;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-/* Larger screen than 768px */
 
 .partner_container {
   width: 90%;
@@ -518,15 +597,14 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
- 
 }
 
-/* Max screen of 768px */
-/* @media screen and (max-width: 768px) {
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
   .partner_container {
-    margin-bottom: 70px;
+    width: 80%;
   }
-} */
+}
 
 .partner_container h3 {
   font-size: var(--step-2);
@@ -535,6 +613,56 @@ export default {
   margin-bottom: 30px;
   color: white;
 }
+
+/* Trailer */
+
+.trailer {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.trailer_container {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -20px;
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .trailer_container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+  
+
+
+.video_container {
+  width: 100%;
+  height: 300px;
+}
+
+@media screen and (min-width: 1024px) {
+  .video_container {
+    width: 80%;
+    height: 550px;
+  }
+}
+
+.trailer_container iframe {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+
 
 /* News Section */
 .news {
@@ -558,7 +686,7 @@ export default {
 /* Larger screen than 1440px */
 @media screen and (min-width: 1440px) {
   .news_container {
-    width: 85%;
+    width: 80%;
   }
 }
 
@@ -573,39 +701,10 @@ export default {
 
 .news_heading a {
   text-decoration: underline;
-  color:  grey;
+  color: grey;
 }
 
 .news_list {
   margin-top: 40px;
 }
-
-/* Join Us */
-
-/* .join_us {
-  min-height: 500px;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.join_us_container {
-  width: 90%;
-  border: 1px solid green;
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.join_us_content {
-  border: 1px solid blue;
-  width: 90%;
-  padding: 80px 0px;
- 
-} */
 </style>

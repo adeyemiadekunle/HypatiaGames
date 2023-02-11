@@ -146,7 +146,8 @@
   </main>
 </template>
 
-<script setup>
+<script>
+
 </script>
 
 <style scoped>
@@ -282,6 +283,13 @@
   }
 }
 
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
+  .tokenomics_container {
+    width: 80%;
+  }
+}
+
 .tokenomics_container > div:nth-of-type(2) {
   width: 100%;
   /* border: 1px solid red; */
@@ -314,6 +322,13 @@
   margin-top: 30px;
   margin-bottom: 70px;
   /* border: 1px solid red; */
+}
+
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
+  .hgt_breakdown_container {
+    width: 80%;
+  }
 }
 
 .hgt_breakdown_container h3 {

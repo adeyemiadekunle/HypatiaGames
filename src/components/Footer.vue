@@ -18,17 +18,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://discord.com/invite/v5R6Cf5NGW" target="_blank">
                       <font-awesome-icon icon="fa-brands fa-discord" />
                     </a>
                 </li>
                 <li>
-                     <a href="">
+                     <a href="https://discord.com/invite/v5R6Cf5NGW" target="_blank">
                       <font-awesome-icon icon="fa-brands fa-telegram" />
                     </a>
                 </li>
                 <li>
-                     <a href="">
+                     <a href="https://www.youtube.com/@hypatiagames" target="_blank">
                       <font-awesome-icon icon="fa-brands fa-youtube" />
                     </a>
                 </li>
@@ -88,6 +88,14 @@ export default {
     /* border: 1px solid red; */
 }
 
+
+/* screen larger than 1440px */
+@media screen and (min-width: 1440px) {
+  .footer_container {
+    width: 80%;
+  }
+}
+
 .join_us_container {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -135,9 +143,7 @@ font-size: var(--step-4);
 @media  screen and (min-width: 1024px) {
     
 .footer_content_container {
-    /* border: 1px solid red; */
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
+
     display: flex;
     justify-content: space-between;
 }
