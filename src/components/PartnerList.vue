@@ -109,22 +109,22 @@ export default {
 
 .partner_img_container {
     /* border: 1px solid  green; */
-    max-height: 120px;
-    max-width: 120px;
+    height: 120px;
+    width: 120px;
 }
 
 @media screen and (min-width: 1024px) {
     .partner_img_container {
-        max-height: 150px;
-        max-width: 150px;
+        height: 150px;
+        width: 150px;
     }
 }
     
 
 .partner_img_container img {
     width: 100%;
-    object-fit: cover;
     height: 100%;
+    object-fit: contain;
     filter: grayscale(100%);
     transition: 0.5s;
 }

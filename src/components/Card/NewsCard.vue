@@ -59,7 +59,7 @@ export default {
 
 .text_container a {
   text-decoration: underline;
-  color: grey;
+  color: #CCCCCC;
   padding-top: 15px;
   font-size: var(--step--1);
 }

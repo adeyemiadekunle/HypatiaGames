@@ -44,7 +44,7 @@
             <p>
              <font-awesome-icon icon="fa-regular fa-copyright" />2023 Hypatia Games Studio
             </p>
-         
+                   
         </div>
         <div  class="footer_others">
             <div class="contact_us">
@@ -54,11 +54,16 @@
             <div>
                 <ul>
                     <li>
-                    <a href="#about" target="_top">About</a>
-                        </li>
-                    <li>Team</li>
-                    <li>Whitepaper</li>
-                    <li>Games</li>
+                        <router-link to="/hgt" >HGT Token</router-link>
+                    <!-- <a href="#about" target="_blank">HGT Token</a> -->
+                    </li>
+                    <li>
+                        <a href="">Whitepaper</a>
+                    </li>
+                    <li>
+                        <a href="">Games</a>
+                    </li>
+                    
                 </ul>
             </div>
         </div>

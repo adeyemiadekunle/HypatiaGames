@@ -4,7 +4,11 @@
     aria-label="My Favorite Images"
   >
     <SplideSlide v-for="data in datas" :key="data.id" >
-      <img :src="data.imgUrl" alt="data.alt" class="hero_image" id="scale-img" />
+      <picture>
+        <source :srcset ='data.imgUrl' type="image/webp" >
+        <img :src="data.imgUrl" :alt="data.alt" class="hero_image" id="scale-img" />
+      </picture>
+     
       <slot class="caption"><h1>Redefined Web3 Gaming Experience</h1></slot>
     </SplideSlide>
   </Splide>
@@ -14,31 +18,36 @@
 import { reactive, defineComponent } from 'vue';
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
-import FHthree from '@/assets/image/FH3.jpg';
-import FHfour from '@/assets/image/FH4.jpg';
-import FHfive from '@/assets/image/FH5.jpg';
+
+import HeroOne from '@/assets/image/Hero1.webp';
+import HeroTwo from '@/assets/image/Hero2.webp';
+import HeroThree from '@/assets/image/Hero3.webp'
+
+
+import { useHead } from '@unhead/vue';
 
 
 export default defineComponent( {
+name: 'HeroSlide',
 components: {Splide, SplideSlide},
 
   setup() {
     const datas = reactive([
       {
         id: 1,
-        imgUrl: FHthree,
+        imgUrl: HeroOne,
         alt: 'Racing Car',
         caption: 'This is lite',
       },
       {
         id: 2,
-        imgUrl: FHfour,
+        imgUrl: HeroTwo,
         alt: 'Multiple car racing',
         caption: 'This is lite',
       },
       {
         id: 3,
-        imgUrl: FHfive,
+        imgUrl: HeroThree,
         alt: 'Racing Car city',
         caption: 'This is lite',
       },
@@ -56,8 +65,17 @@ components: {Splide, SplideSlide},
       type  : 'fade',
       speed: 3000,
       easing: 'ease',
-     
     }
+
+    useHead({
+      link: [
+        {
+          rel: 'preload',
+          as: 'image',
+          href: HeroOne,
+        },
+      ],
+    })
 
  
     return { datas, options };

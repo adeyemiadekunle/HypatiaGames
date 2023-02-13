@@ -74,7 +74,7 @@ export default {
     .news_section_container {
         width: 100%;
         gap: 50px;
-         flex-direction: row;
+        flex-direction: row;
       
     }
     

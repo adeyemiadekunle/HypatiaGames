@@ -36,14 +36,14 @@
     <!-- about the game  -->
     <section class="about_game">
       <div class="game_heading">
-        <div><h4>Upcoming Game</h4></div>
+        <div><h3>Upcoming Game</h3></div>
       </div>
       <div class="background_image">
         <div class="text_overlay">
           <div class="text_content">
-            <div class="game_logo">
+            <!-- <div class="game_logo">
               <img src="../assets/image/New_Logo.webp" alt="flaming_logo" />
-            </div>
+            </div> -->
             <p>
               Flaming Wheelz is a fantasy RPG mixed with racing for anyone who's
               ever daydreamed about conquering the street with your driving
@@ -82,12 +82,12 @@
         </div>
         <div class="hgt_image_container">
           <img
-            src="../assets/image/HGT_Asset.avif"
+            src="../assets/image/HGT_Asset.webp"
             alt="HGT_function"
             class="desktop"
           />
           <img
-            src="../assets/image/Mobile_HGT_Asset.avif"
+            src="../assets/image/Mobile_HGT_Asset.webp"
             alt="HGT_function"
             class="tablet"
           />
@@ -300,7 +300,7 @@ export default {
   margin: 0 auto;
 }
 
-.game_heading div h4 {
+.game_heading div h3 {
   text-align: center;
   color: white;
   font-size: var(--step-2);
@@ -308,7 +308,7 @@ export default {
 }
 
 .background_image {
-  background-image: url("../assets/image/Flamingwheelz.jpeg");
+  background-image: url("../assets/image/flamingwheelz.webp");
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
@@ -356,10 +356,11 @@ export default {
   }
 }
 
-.game_logo img {
+/* .game_logo img {
   width: 300px;
+  height: auto;
   margin-bottom: 20px;
-}
+} */
 
 .text_content p {
   text-align: center;
@@ -471,6 +472,8 @@ export default {
 
 .about_hgt_container .desktop {
   display: none;
+  width: 100%;
+  height: auto;
 }
 
 .hgt_image_container .tablet {
@@ -493,7 +496,6 @@ export default {
 
   .hgt_image_container .desktop {
     display: block;
-    height: auto;
     object-fit: contain;
     object-position: 100%;
   }
@@ -617,11 +619,10 @@ export default {
 /* Trailer */
 
 .trailer {
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .trailer_container {
@@ -631,18 +632,19 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -20px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+
   
 }
 
 @media screen and (min-width: 1024px) {
   .trailer_container {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 }
   
-
 
 .video_container {
   width: 100%;
@@ -659,7 +661,6 @@ export default {
 .trailer_container iframe {
   width: 100%;
   height: 100%;
-  /* border: 1px solid red; */
 }
 
 
@@ -668,7 +669,6 @@ export default {
 .news {
   min-height: 400px;
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -678,15 +678,15 @@ export default {
 .news_container {
   width: 90%;
   margin: 0 auto;
-  /* border: 1px solid green; */
   margin-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* Larger screen than 1440px */
 @media screen and (min-width: 1440px) {
   .news_container {
     width: 80%;
+
   }
 }
 
@@ -701,7 +701,7 @@ export default {
 
 .news_heading a {
   text-decoration: underline;
-  color: grey;
+  color: #CCCCCC;
 }
 
 .news_list {

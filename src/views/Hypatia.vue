@@ -25,7 +25,7 @@
             <span>$HGT</span></div>
         </div>
         <div class="profile_item">
-          <div><h3>CHAIN</h3></div>
+          <div><h3>MULTI CHAIN</h3></div>
           <div>
              <img src="../assets/image/klevers.avif" alt="">
             <span>KLEVER</span></div>
@@ -147,6 +147,9 @@
 </template>
 
 <script>
+export default {
+  name: 'Hypatia'
+}
 
 </script>
 
@@ -166,7 +169,6 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  /* border: 1px solid red; */
   margin-top: 150px;
 }
 

@@ -159,6 +159,7 @@ export default {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .logo .logo_desktop {
@@ -169,6 +170,10 @@ export default {
   display: block;
   width: 80px;
   height: 100%;
+}
+
+.header_desktop_bg {
+  padding: 5px 0;
 }
 
 /* Lower than 1024px  */
@@ -297,7 +302,7 @@ export default {
   .logo .logo_desktop {
     display: block;
     width: 100px;
-    height: 100%;
+    height: auto;
   }
 
   .logo .logo_mobile {
