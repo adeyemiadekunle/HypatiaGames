@@ -54,7 +54,7 @@
           <h3>Tokenomics</h3>
         </div>
         <div>
-          <img src="../assets/image/tokenomics.avif" alt="hgt_tokenomics" />
+          <img src="../assets/image/tokenomics.webp" alt="hgt_tokenomics" />
         </div>
       </div>
     </section>
