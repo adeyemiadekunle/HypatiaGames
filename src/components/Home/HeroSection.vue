@@ -27,18 +27,17 @@ export default {
   /* border: 1px solid red; */
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 768px) {
   .hero {
     height: 700px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .hero {
     height: 800px;
   }
 }
-  
-
 
 .hero video {
   position: absolute;
@@ -55,7 +54,7 @@ export default {
   bottom: 0;
   width: 100%;
   color: #fff;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.5);
@@ -64,7 +63,7 @@ export default {
 
 .hero-caption h1 {
   font-size: var(--step-6);
-  margin: 0 0 1rem;
+  line-height: 1.2;
 }
 
 /* .dark-overlay {

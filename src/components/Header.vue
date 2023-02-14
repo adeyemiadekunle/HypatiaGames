@@ -163,7 +163,7 @@ export default {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  /* padding: 0 0px; */
 }
 
 .logo .logo_desktop {
