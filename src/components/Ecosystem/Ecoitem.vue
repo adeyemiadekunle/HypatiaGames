@@ -2,11 +2,14 @@
   <div class="splide_container">
     <Splide :options="options" aria-label="Ecosystem"  >
       <SplideSlide  v-for="ecoList in ecoLists" :key="ecoList.id">
-        <Card :imgUrl="ecoList.imgUrl"
+        <Card 
+              :imgUrl="ecoList.imgUrl"
               :alt="ecoList.title" 
-              :title="ecoList.title"
+              :heading="ecoList.title"
               :status="ecoList.status"
               :text="ecoList.text"
+              :title="ecoList.title"
+              v-bind:class="status == ecoList.status ? 'image-active' : 'image-alt'"
         />
       </SplideSlide>
     </Splide>
@@ -17,14 +20,17 @@
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 import Card from "../Card/Card.vue";
+import FlamingWheelz from "../../assets/image/flamingwheelz.webp";
 
-import { reactive } from "vue";
-
+import { reactive, ref } from "vue";
 export default {
   name: "Ecoitem",
   components: { Splide, SplideSlide, Card },
 
   setup() {
+
+    const status = ref('In dev');
+
     const options = reactive({
       perMove: 1,
       rewind: true,
@@ -49,14 +55,14 @@ export default {
       {
         id: 1,
         title: "Hypatia Games",
-        imgUrl: "https://picsum.photos/id/227/300/300",
+        imgUrl: FlamingWheelz,
         status: "In dev",
         text: " A decentralized indie game studio where we'll build games for our ecosystem and others. ",
       },
       {
         id: 2,
         title: "Hypatia Farms",
-        imgUrl: "https://picsum.photos/id/327/300/300",
+        imgUrl: "https://picsum.photos/id/347/300/300",
         status: "Coming Soon",
         text: "A real-life farm that will have percentage of its revenue to promote $HGT and distributed to it's Genesis NFTs holders.",
       },
@@ -98,7 +104,7 @@ export default {
       
     ]);
 
-    return { options, ecoLists };
+    return { options, ecoLists, status };
   },
 };
 </script>
@@ -106,5 +112,13 @@ export default {
 <style>
 .splide_container {
   width: 100%;
+}
+
+.image-active img {
+  filter: blur(0px);
+}
+
+.image-alt img {
+  filter: blur(18px);
 }
 </style>

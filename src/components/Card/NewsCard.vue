@@ -2,16 +2,17 @@
   <div class="news_card_container">
     <div class="news_card">
       <img
-        src="https://picsum.photos/800/600?random=4"
-        alt="Avatar"
+        :src="imgUrl"
+        :alt="alt"
+        :title="title"
+        loading="lazy"
         style="width: 100%"
       />
       <div class="text_container">
         <h4>
-          GAME ON: Web3 Insight from llker Unsal at Eldarun. Now partnerd with
-          Myria
+          <a :href="href" target="_blank">{{heading}}</a>
         </h4>
-        <a href="">Read More</a>
+        <a :href="href"  target="_blank">Read More</a>
       </div>
     </div>
   </div>
@@ -20,6 +21,7 @@
 <script>
 export default {
   name: "NewsCard",
+  props: ["imgUrl", "heading", "title", "alt", 'href']
 };
 
 
@@ -62,5 +64,11 @@ export default {
   color: #CCCCCC;
   padding-top: 15px;
   font-size: var(--step--1);
+}
+
+.text_container > h4 a {
+  font-size: var(--step-0);
+  text-decoration: none;
+  color: var(--primary-white);
 }
 </style>

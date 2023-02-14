@@ -15,19 +15,19 @@
     <!-- Token Profile -->
     <section class="token_profile">
       <div>
-        <h3>Token Profile</h3>
+        <h2>Token Profile</h2>
       </div>
       <div class="profile_item_container">
         <div class="profile_item">
           <div><h3>SYMBOL</h3></div>
           <div>
-            <img src="../assets/image/hypatialogo.avif" alt="">
+            <img src="../assets/image/hypatialogo.webp" alt="">
             <span>$HGT</span></div>
         </div>
         <div class="profile_item">
           <div><h3>MULTI CHAIN</h3></div>
           <div>
-             <img src="../assets/image/klevers.avif" alt="">
+             <img src="../assets/image/klevers.webp" alt="">
             <span>KLEVER</span></div>
         </div>
         <div class="profile_item">
@@ -147,8 +147,29 @@
 </template>
 
 <script>
+import {useHead} from "@unhead/vue"
 export default {
-  name: 'Hypatia'
+  name: 'Hypatia',
+
+  setup(){
+     useHead({
+      title: "Hypatia Games Token | HGT",
+      meta: [
+        {
+          name: "description",
+          content: "Hypatia Game Token is a decentralized, and governance token in Hypatia Game ecosystem.",
+        },
+        {
+          name: "keywords",
+          content: "Hypatia Games, Hypatia Games Token, HGT, Web3 Gaming",
+        }, 
+      ],
+    });
+
+
+    return{}
+
+  }
 }
 
 </script>

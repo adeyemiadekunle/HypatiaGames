@@ -38,7 +38,7 @@
       <div class="footer_content_container">
         <div class="footer_logo">
             <div>
-                <img src="../assets/image/hypatia_full__logo_w.avif" alt="footer_logo">
+                <img src="../assets/image/hypatia_full__logo_w.webp" alt="footer_logo" title="hypatia game logo" loading="lazy" >
             </div>
          
             <p>
@@ -58,10 +58,10 @@
                     <!-- <a href="#about" target="_blank">HGT Token</a> -->
                     </li>
                     <li>
-                        <a href="">Whitepaper</a>
+                        <a href="https://hypatia-games.gitbook.io/hypatia-holdings-hypatia-games-whitepaper/" target="_blank">Whitepaper</a>
                     </li>
                     <li>
-                        <a href="">Games</a>
+                        <a href="https://flamingwheelz.com/" target="_blank">Games</a>
                     </li>
                     
                 </ul>

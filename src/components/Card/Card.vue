@@ -3,14 +3,16 @@
     <div class="card">
       <div class="card_img_container">
         <img
+          :title="title"
           :src="imgUrl"
           :alt="alt"
+          loading="lazy"
           style="width: 100%"
         />
         <p class="status">{{status}} </p>
       </div>
       <div class="container">
-        <h3><b>{{title}}</b></h3>
+        <h3><b>{{heading}}</b></h3>
         <p>
           {{text}}
         </p>
@@ -20,9 +22,10 @@
 </template>
 
 <script>
+
 export default {
   name: 'Card',
-  props: ['imgUrl', 'status', 'title', 'text', 'alt']
+  props: ['imgUrl', 'status','heading', 'title', 'text', 'alt']
 };
 </script>
 
@@ -32,7 +35,6 @@ export default {
 }
 
 .card {
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
   width: 100%;
   margin: auto;
@@ -45,15 +47,17 @@ export default {
 .card_img_container img {
   height: 250px;
   position: relative;
-  filter: blur(20px);
+  object-fit: cover;
   
 }
 
 .card_img_container .status {
   position: absolute;
   top: 0;
-  padding-left: 15px;
+  right: 0;
+  padding-right: 15px;
   padding-top: 15px;
+  color: var( --tertiary-pink-accent-2);
 }
 
 .container {

@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import {createHead} from '@unhead/vue'
 
+
 import './assets/main.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'

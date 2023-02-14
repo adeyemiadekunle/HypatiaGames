@@ -6,13 +6,17 @@
           <router-link @click="closeMenu" to="/">
             <img
               class="logo_desktop"
-              src="../assets/image/hypatia_full__logo_b.avif"
+              src="../assets/image/hypatia_full__logo_b.webp"
               alt="Logo"
+              title="Hypatia Games Logo"
+              loading="eager"
             />
             <img
               class="logo_mobile"
-              src="../assets/image/hypatia_full__logo_w.avif"
+              src="../assets/image/hypatia_full__logo_w.webp"
               alt="Logo"
+              title="Hypatia Games Logo"
+              loading="eager"
             />
           </router-link>
         </div>
