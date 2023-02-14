@@ -54,6 +54,13 @@ export default {
   setup() {
     useHead({
       title: "Hypatia Games| Redefining Web3 Gaming Experience",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://hypatiagames.net/",
+        },
+      ],
+
       meta: [
         {
           name: "description",

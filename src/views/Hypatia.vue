@@ -154,6 +154,12 @@ export default {
   setup(){
      useHead({
       title: "Hypatia Games Token | HGT",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://hypatiagames.net/",
+        },
+      ],
       meta: [
         {
           name: "description",
