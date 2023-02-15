@@ -1,7 +1,8 @@
 <template>
   <section class="hero">
-    <video autoplay loop muted playinline class="dark-overlay" loading="eager">
-      <source src="../../assets/video/background_video.mp4" type="video/mp4" />
+    <img src="../../assets/image/hero_placeholder.avif" srcset="../../assets/image/hero_placeholder.webp" alt=""  >
+    <video autoplay muted loop >
+      <source :src="backgroundVideoSrc" type="video/mp4"   />
     </video>
     <div class="hero-caption">
       <h1 class="caption">Redefined Web3 Gaming Experience</h1>
@@ -10,10 +11,15 @@
 </template>
 
 <script>
-// import { useHead } from "@unhead/vue";
+import HeroVideo from "../../assets/video/background_video.mp4"
 
 export default {
   name: "HeroSlide",
+  data() {
+    return {
+      backgroundVideoSrc: HeroVideo,
+    }
+  },
 };
 </script>
 
@@ -39,7 +45,7 @@ export default {
   }
 }
 
-.hero video {
+.hero video, img {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,6 +70,7 @@ export default {
 .hero-caption h1 {
   font-size: var(--step-6);
   line-height: 1.2;
+  font-weight: 700;
 }
 
 /* .dark-overlay {

@@ -4,7 +4,7 @@
     <div class="news_container">
       <div class="news_heading">
         <h3>Latest Update & News</h3>
-        <a href="https://medium.com/@hypatiagames.004" target="_blank">Read More</a>
+        <a href="https://medium.com/@HypatiaGames" target="_blank">Read More</a>
       </div>
       <div class="news_list">
         <!-- <NewsSection /> -->
@@ -30,6 +30,7 @@
 import NewsCard from "../Card/NewsCard.vue";
 import Genesis_NFT_Mint from "../../assets/image/Genesis_NFT_Mint.webp"
 import Partnership from "../../assets/image/Partnership_with_VezaNFT.webp"
+import HypatiaGames from "../../assets/image/HypatiaGames.webp"
 import { reactive } from "vue";
 export default {
     name: "NewsSection",
@@ -39,24 +40,25 @@ export default {
   setup() {
 
     const blogs = reactive([
-      {
+       {
         id: 1,
-        imgUrl: Partnership,
-        heading: "Partnership With VezaNFT",
-        href: "https://medium.com/@hypatiagames.004/partnership-with-vezanft-8dc895583a69",
+        imgUrl: HypatiaGames,
+        heading: "The Hypatia Games Ecosystem (A Hidden Gem)",
+        href: "https://medium.com/@HypatiaGames/the-hypatia-games-ecosystem-a-hidden-gem-4f5977ae5a59",
       },
       {
         id: 2,
-        imgUrl: Genesis_NFT_Mint,
-        heading: "FlamingWheelz Genesis NFT Mint",
-        href: "https://medium.com/@hypatiagames.004/flamingwheelz-genesis-nft-mint-e6aa46ae389" ,
+        imgUrl: Partnership,
+        heading: "Partnership With VezaNFT",
+        href: "https://medium.com/@HypatiaGames/partnership-with-vezanft-8dc895583a69",
       },
       {
         id: 3,
         imgUrl: Genesis_NFT_Mint,
         heading: "FlamingWheelz Genesis NFT Mint",
-        href: "#",
+        href: "https://medium.com/@HypatiaGames/flamingwheelz-genesis-nft-mint-e6aa46ae389" ,
       },
+      
     ])
 
     return {blogs};
