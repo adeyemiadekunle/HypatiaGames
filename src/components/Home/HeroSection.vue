@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
-    <img src="../../assets/image/hero_placeholder.avif" srcset="../../assets/image/hero_placeholder.webp" alt=""  >
-    <video autoplay muted loop >
+    <img src="../../assets/image/hero_placeholder.avif" srcset="../../assets/image/hero_placeholder.webp" alt=""  v-show="showPlaceholder"  >
+    <video autoplay muted loop ref="video" >
       <source :src="backgroundVideoSrc" type="video/mp4"   />
     </video>
     <div class="hero-caption">
@@ -12,13 +12,23 @@
 
 <script>
 import HeroVideo from "../../assets/video/background_video.mp4"
+import { ref, computed } from 'vue';
 
 export default {
   name: "HeroSlide",
-  data() {
+  setup() {
+    const video = ref(null);
+    const backgroundVideoSrc = HeroVideo;
+
+    const showPlaceholder = computed(() => {
+      return video.value && video.value.readyState < 2;
+    });
+
     return {
-      backgroundVideoSrc: HeroVideo,
-    }
+      video,
+      backgroundVideoSrc,
+      showPlaceholder,
+    };
   },
 };
 </script>
