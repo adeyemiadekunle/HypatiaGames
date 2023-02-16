@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <img src="../../assets/image/hero_placeholder.avif" srcset="../../assets/image/hero_placeholder.webp" alt=""  v-show="showPlaceholder"  >
+    <img src="../../assets/image/hero_placeholder.avif" srcset="../../assets/image/hero_placeholder.webp" alt=""  v-show="showPlaceholder" loading="eager" >
     <video autoplay muted loop ref="video" >
       <source :src="backgroundVideoSrc" type="video/mp4"   />
     </video>
