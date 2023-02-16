@@ -28,7 +28,7 @@
 
 <script>
 import NewsCard from "../Card/NewsCard.vue";
-import Genesis_NFT_Mint from "../../assets/image/Genesis_NFT_Mint.webp"
+import Hypatia_token from "../../assets/image/hypatia_token.webp"
 import Partnership from "../../assets/image/Partnership_with_VezaNFT.webp"
 import HypatiaGames from "../../assets/image/HypatiaGames.webp"
 import { reactive } from "vue";
@@ -40,24 +40,25 @@ export default {
   setup() {
 
     const blogs = reactive([
-       {
+      {
         id: 1,
+        imgUrl: Hypatia_token,
+        heading: "Hypatia Games Token (HGT): A Jadeite among Gems",
+        href: "https://medium.com/@HypatiaGames/hypatia-games-token-hgt-a-jadeite-among-gems-f3f7d7144033" ,
+      },
+       {
+        id: 2,
         imgUrl: HypatiaGames,
         heading: "The Hypatia Games Ecosystem (A Hidden Gem)",
         href: "https://medium.com/@HypatiaGames/the-hypatia-games-ecosystem-a-hidden-gem-4f5977ae5a59",
       },
       {
-        id: 2,
+        id: 3,
         imgUrl: Partnership,
         heading: "Partnership With VezaNFT",
         href: "https://medium.com/@HypatiaGames/partnership-with-vezanft-8dc895583a69",
       },
-      {
-        id: 3,
-        imgUrl: Genesis_NFT_Mint,
-        heading: "FlamingWheelz Genesis NFT Mint",
-        href: "https://medium.com/@HypatiaGames/flamingwheelz-genesis-nft-mint-e6aa46ae389" ,
-      },
+      
       
     ])
 
