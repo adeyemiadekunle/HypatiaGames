@@ -21,14 +21,14 @@
         <div class="profile_item">
           <div><h3>SYMBOL</h3></div>
           <div>
-            <img src="../assets/image/hypatialogo.webp" alt="">
+            <img src="../assets/image/hypatialogo.webp" alt="hypatialogo">
             <span>$HGT</span></div>
         </div>
         <div class="profile_item">
-          <div><h3>MULTI CHAIN</h3></div>
+          <div><h3>CHAIN</h3></div>
           <div>
-             <img src="../assets/image/klevers.webp" alt="">
-            <span>KLEVER</span></div>
+             
+            <span>MULTI-CHAIN</span></div>
         </div>
         <div class="profile_item">
           <div><h3>CONTRACT</h3></div>
